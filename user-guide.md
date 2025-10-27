@@ -29,11 +29,13 @@ permalink: /instructions/
 
 - [Getting Started](#getting-started)
 - [Basic Tools](#basic-tools)
+- [Purchase Order Management](#purchase-order-management)
 - [Customer Management](#customer-management)
 - [Supplier Management](#supplier-management)
 - [Service Management](#service-management)
 - [Price List Management](#price-list-management)
 - [Multiple Email Tool](#multiple-email-tool)
+- [Sales Order Management](#sales-order-management)
 - [Historical Sales Orders Import](#historical-sales-orders-import)
 - [Data Export Tools](#data-export-tools)
 - [Troubleshooting](#troubleshooting)
@@ -115,6 +117,92 @@ The **History box** at the top keeps a log of everything you do - think of it as
 **What it is:** A permanent log of your extension activities that stays visible as you navigate.
 
 **To clear it:** Click the trash can icon when it gets too full.
+
+---
+
+## Purchase Order Management
+
+### Applying Bulk Discounts to Purchase Orders
+
+**When to use:** Apply percentage discounts to all items in a purchase order that haven't been received yet.
+
+**⚠️ IMPORTANT:** This tool only affects pending (non-received) purchase order items to prevent inventory issues.
+
+1. **Navigate to any Purchase Order page** in Katana
+   - The Purchase Order ID is automatically detected from the URL
+
+2. **Find "Purchase Order Discount Tool" in the side panel**
+
+3. **Enter the discount percentage:**
+   - Enter as a whole number (e.g., "10" for 10% discount)
+   - The tool will calculate and apply the discount to eligible items
+
+4. **Click "Apply Discount"**
+   - The tool will:
+     - Retrieve the current purchase order details
+     - Filter out any items that have already been received
+     - Apply the discount percentage to pending items only
+     - Preserve existing notes by appending discount information
+     - Update the purchase order with the new prices
+
+5. **Monitor progress:**
+   - Watch the progress bar for real-time status
+   - The History box will show detailed results
+   - Any errors or warnings will be clearly displayed
+
+**Safety Features:**
+- **Received item protection:** Items already received are automatically skipped
+- **Note preservation:** Existing purchase order notes are maintained and discount information is added
+- **Comprehensive logging:** All changes are tracked with timestamps
+- **Error handling:** Clear error messages if issues occur
+
+**Example:** If you have a purchase order with 10 items where 3 have been received, only the 7 pending items will have the discount applied.
+
+### Importing Open Purchase Orders
+
+**When to use:** Create multiple purchase orders from a spreadsheet for pending/open orders that need to be processed.
+
+**⚠️ IMPORTANT:** This feature is for importing **open/pending purchase orders** that still need to be fulfilled. For completed historical orders, use other import methods.
+
+1. **Go to Purchase Orders** in Katana
+
+2. **Find "Purchase Order Management Tools" in the side panel**
+
+3. **Generate Template (recommended):**
+   - Click "Generate PO Template"
+   - Downloads Excel file with proper formatting and validation rules
+   - Includes help worksheets with field explanations
+
+4. **Prepare your import data:**
+   - Fill in supplier information (will auto-create suppliers if needed)
+   - Add purchase order line items with materials/products
+   - Include quantities, unit costs, and due dates
+   - Follow template validation rules for best results
+
+5. **Import Purchase Orders:**
+   - Click "Import Purchase Orders"
+   - Select your prepared Excel/CSV file
+   - Monitor the multi-phase import process:
+     - **Phase 1:** Supplier validation/creation
+     - **Phase 2:** Purchase order creation
+     - **Phase 3:** Line item processing
+
+6. **Review Results:**
+   - Download results file showing success/error status
+   - Check History box for summary information
+   - Handle any errors with specific guidance provided
+
+**Key Features:**
+- **Supplier Auto-Creation:** Creates new suppliers automatically if they don't exist
+- **Material Matching:** Maps materials by SKU for accurate inventory tracking
+- **Validation:** Comprehensive data validation before processing
+- **Error Recovery:** Detailed error messages for easy correction
+
+**Best Practices:**
+- Use the generated template for consistent formatting
+- Validate supplier email addresses and contact information
+- Ensure material SKUs match your Katana inventory
+- Test with a small batch before large imports
 
 ---
 
@@ -343,7 +431,74 @@ The **History box** at the top keeps a log of everything you do - think of it as
 
 ---
 
+## Sales Order Management
+
+**Purpose:** Import **open/active sales orders** that customers have placed and need to be fulfilled.
+
+**⚠️ KEY DIFFERENCE:** This tool is for importing **OPEN orders** (pending fulfillment). For **completed/historical orders**, use the Historical Sales Orders Import tool below instead.
+
+### Generating Sales Order Templates
+
+**When to use:** Create Excel templates for bulk sales order imports with proper validation and examples.
+
+1. **Go to any Sales page** in Katana
+
+2. **Find "Sales Order Management Tools" in the side panel**
+
+3. **Click "Generate Template"**
+   - Downloads an Excel file with multiple worksheets:
+     - **Sales Orders** - Main template with validation rules
+     - **Help** - Detailed instructions and field explanations
+     - **Examples** - Sample data showing proper formatting
+
+4. **Use the template:**
+   - Fill in customer information, order details, and line items
+   - Follow the validation rules built into the Excel file
+   - Reference the Help and Examples worksheets as needed
+
+### Importing Sales Orders
+
+**When to use:** Create multiple sales orders from a spreadsheet, including automatic customer creation.
+
+**Key Features:**
+- **Customer Auto-Creation** - Creates new customers automatically if they don't exist
+- **SKU-to-Variant Mapping** - Automatically maps product SKUs to their variants
+- **Tax Rate Management** - Finds existing tax rates or creates new ones as needed
+- **Comprehensive Validation** - Validates all data before processing
+
+1. **Prepare your import file:**
+   - Use the generated template (recommended) OR
+   - Use your own CSV/Excel file with the required columns
+
+2. **Click "Import Sales Orders"** and select your file
+
+3. **Monitor the import process:**
+   - **Phase 1:** Customer processing (create new customers if needed)
+   - **Phase 2:** Sales order creation with line items
+   - **Phase 3:** Tax rate processing and assignment
+   - Progress is shown in real-time for each phase
+
+4. **Review results:**
+   - Download the results file showing success/error status for each row
+   - Check the History box for summary information
+   - Any errors will include specific details for correction
+
+**Important Notes:**
+- **Customer Creation:** New customers are created automatically based on email addresses
+- **Product Matching:** Products are matched by SKU; variants are handled automatically
+- **Tax Rates:** Tax rates are converted from percentages to basis points (multiply by 100)
+- **Error Handling:** Detailed error reporting helps identify and fix issues
+
+**Example Workflow:**
+1. Generate template → 2. Fill with order data → 3. Import → 4. Review results → 5. Handle any errors
+
+---
+
 ## Historical Sales Orders Import
+
+**Purpose:** Import **completed/historical sales orders** from past transactions to establish proper inventory levels and sales history in Katana.
+
+**⚠️ KEY DIFFERENCE:** This tool is for importing **COMPLETED orders** (already fulfilled/shipped). For **active/pending orders**, use the Sales Order Management tool above instead.
 
 ### Setting Up Historical Imports
 

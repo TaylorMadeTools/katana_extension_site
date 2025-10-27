@@ -152,24 +152,67 @@ This Chrome extension enhances the Katana MRP web experience by providing advanc
 - **Supplier Editing:** Suppliers with multiple emails show validation errors in Katana UI
 - **Admin Panel Required:** Future supplier edits must use Admin Panel or this tool
 
+### 11. Purchase Order Discount Tool
+**Location:** Purchase Order pages  
+**Purpose:** Apply bulk percentage discounts to purchase order items
+
+**Features:**
+- **Automatic PO ID detection** from URL for seamless operation
+- **Smart item filtering** - only affects pending (non-received) items
+- **Note preservation** - maintains existing purchase order notes
+- **Real-time progress tracking** with detailed status updates
+- **Comprehensive error handling** and debugging capabilities
+- **Audit trail maintenance** - appends discount information to existing notes
+
+**Safety Features:**
+- **Received item protection** - automatically skips items already received
+- **Data integrity** - preserves all existing purchase order information
+- **Timestamped logging** - tracks all discount applications with timestamps
+
+### 12. Sales Order Management Tools
+**Location:** Sales pages  
+**Purpose:** Comprehensive sales order template generation and bulk import
+
+**Features:**
+- **Excel template generation** with built-in validation rules and help worksheets
+- **Customer auto-creation** - automatically creates new customers during import
+- **SKU-to-variant mapping** - seamless product variant handling
+- **Tax rate management** - finds existing rates or creates new ones
+- **Multi-phase import process** - customers → orders → line items → tax processing
+- **Comprehensive validation** - prevents data corruption with thorough checks
+- **Detailed result reporting** - downloadable success/error logs
+
+**Technical Capabilities:**
+- **Percentage-to-basis-points conversion** for tax rate compatibility
+- **Duplicate detection** and handling during customer creation
+- **Variant resolution** from product SKUs for accurate inventory tracking
+- **Error recovery** - detailed error messages for issue resolution
+
 ## API Architecture
 
 ### Centralized API Layer ✅ Completed
 All API interactions are now managed through a centralized system located in `src/tools/api/`.
 
 ### API Modules (`src/tools/api/`)
-- **`katanaAPI.js`** - Core API client with authentication and base methods
-- **`customerAPI.js`** - Customer-specific API operations
-- **`supplierAPI.js`** - Supplier-specific API operations  
-- **`serviceAPI.js`** - Service item API operations
-- **`priceListAPI.js`** - Price list API operations
-- **`customFieldAPI.js`** - Custom field API operations
+- **`factory.js`** - Core API client with authentication and base methods
+- **`customers.js`** - Customer-specific API operations
+- **`suppliers.js`** - Supplier-specific API operations  
+- **`services.js`** - Service item API operations
+- **`priceLists.js`** - Price list API operations
+- **`customFields.js`** - Custom field API operations
+- **`purchaseOrders.js`** - Purchase order operations and discount management
+- **`salesOrders.js`** - Sales order creation and management operations
+- **`products.js`** - Product API operations and management
+- **`materials.js`** - Materials API operations and management
+- **`variants.js`** - Product variant API operations
+- **`inventory.js`** - Inventory management API operations
+- **`locations.js`** - Location/warehouse API operations
+- **`stockAdjustments.js`** - Stock adjustment API operations
+- **`tax.js`** - Tax rate management API operations
 
 ### Utility Layer (`src/tools/utils/`)
-- **`dataProcessor.js`** - Data transformation and validation
-- **`excelHandler.js`** - Excel file generation and parsing
-- **`hashUtils.js`** - Hash generation for change detection
-- **`progressTracker.js`** - Progress bar and status management
+- **`apiHelpers.js`** - Common API utility functions and helpers
+- **`progressComponents.js`** - Progress bar and status management components
 
 ### Benefits
 - **Consistent error handling** across all tools
@@ -181,22 +224,22 @@ All API interactions are now managed through a centralized system located in `sr
 ### Usage Pattern
 ```javascript
 // Example API usage
-import { customerAPI } from '../api/customerAPI.js';
-import { progressTracker } from '../utils/progressTracker.js';
+import { customers } from '../api/customers.js';
+import { progressComponents } from '../utils/progressComponents.js';
 
 async function importCustomers(data) {
-    const tracker = progressTracker.create('Importing customers');
+    const progressBar = progressComponents.create('Importing customers');
     
     try {
-        const result = await customerAPI.bulkImport(data, {
-            onProgress: tracker.update,
+        const result = await customers.bulkImport(data, {
+            onProgress: progressBar.update,
             validate: true
         });
         
-        tracker.complete('Import successful');
+        progressBar.complete('Import successful');
         return result;
     } catch (error) {
-        tracker.error(`Import failed: ${error.message}`);
+        progressBar.error(`Import failed: ${error.message}`);
         throw error;
     }
 }
