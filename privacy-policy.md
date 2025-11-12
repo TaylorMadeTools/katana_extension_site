@@ -4,42 +4,64 @@ title: Privacy Policy
 permalink: /privacy/
 ---
 
-**Last Updated:** September 30, 2025
+**Last Updated:** November 12, 2024
 
 ## Overview
 
-Katana Master Extension is committed to protecting your privacy. This extension operates entirely within your browser and does not transmit personal data to external servers. This privacy policy explains what data we collect, how we store it, and your rights regarding your data.
+Katana Master Extension is committed to protecting your privacy. This extension collects minimal usage analytics to improve functionality and provides optional email-based support. This privacy policy explains what data we collect, how we use it, and your rights regarding your data.
 
 ## Data Collection
 
-### We Do NOT Collect Any Data
-**Important:** This extension does not collect, transmit, or store any user data on external servers. All data remains on your device only.
+### Anonymous Usage Analytics (Collected by Default)
+- **Tool Usage**: Which tools you use and how often
+- **Error Tracking**: Technical errors to improve stability  
+- **Feature Adoption**: Which features are most/least used
+- **Session Data**: Extension usage sessions (anonymized)
 
-### What the Extension Stores Locally (On Your Device Only)
-- **API Keys:** Your Katana MRP API key is encrypted and stored in your browser's local storage for functionality
-- **User Preferences:** Tool visibility settings and keyboard shortcut configurations are saved locally for your convenience
-- **No Data Collection:** We (the developer) never receive, access, or collect any of your data
+### Optional Email Collection (Opt-in Only)
+- **Email Address**: Only collected if you explicitly opt-in through extension settings
+- **Purpose**: Enable direct support and feature feedback
+- **Control**: You can opt-out at any time through the extension interface
 
-### What We Do NOT Collect
-- ❌ Personal information (names, emails, addresses)
-- ❌ Browsing history or behavior tracking
-- ❌ Usage analytics or telemetry
-- ❌ Third-party cookies or tracking pixels
-- ❌ Any data transmitted to external servers
+### What We Do NOT Collect (Unless You Opt-In)
+- ❌ Personally identifiable information (unless you provide email)
+- ❌ Your Katana data or API responses
+- ❌ Passwords or authentication credentials
+- ❌ Financial or payment information
+
+## Data We Access (Not Stored)
+
+### Katana Page Interactions
+- **Page Content**: We access Katana pages to provide tool functionality
+- **Network Requests**: We monitor API calls for data extraction features
+- **User Interface**: We interact with Katana's interface elements
+- **Local Processing**: All processing happens in your browser
 
 ## Data Storage
 
-### Local Storage Only
-- All data is stored exclusively in Chrome's local extension storage
-- No cloud storage or external databases are used
-- Data is encrypted using AES-GCM encryption
-- Storage is session-based and cleared when browser is closed
+### Local Storage
+- **API Keys**: Encrypted and stored locally using AES-GCM encryption
+- **Preferences**: Tool settings stored in browser's extension storage
+- **Opt-in Status**: Email and consent preferences stored locally
 
 ### API Communications
 - Extension communicates directly with Katana MRP API servers only
 - No intermediary servers or third-party services involved
 - Your API requests go directly from your browser to Katana's servers
 - We never intercept, log, or store API request data
+
+## How We Use Collected Data
+
+### Anonymous Analytics Data
+- **Improve Extension**: Identify bugs and enhancement opportunities
+- **Feature Development**: Understand which tools are most valuable
+- **Performance Optimization**: Optimize extension performance
+- **Support**: Troubleshoot common issues
+
+### Email Data (Opt-in Only)
+- **Direct Support**: Reach out for troubleshooting assistance
+- **Feature Feedback**: Ask about specific feature improvements
+- **Update Notifications**: Inform about important updates (optional)
 
 ## Data Security
 
@@ -60,47 +82,56 @@ Katana Master Extension is committed to protecting your privacy. This extension 
 
 ## Third-Party Services
 
-### We Do NOT Use
-- ❌ Analytics services (Google Analytics, etc.)
-- ❌ Crash reporting services
-- ❌ Advertisement networks
-- ❌ Social media integrations
-- ❌ External logging services
+### Mixpanel Analytics
+- **Purpose**: Anonymous usage analytics only
+- **Data Type**: Tool usage, errors, feature adoption
+- **Identification**: Random client ID (or email if opted-in)
+- **Privacy**: No personal data unless you opt-in
 
-### Only Integration: Katana MRP API
-- Direct communication with official Katana MRP API endpoints
-- Uses your personal API key for authentication
-- Standard HTTPS encryption for all communications
-- No modification or interception of API responses
+### Katana MRP API
+- **Purpose**: Provide extension functionality
+- **Data Flow**: Direct connection using your API key
+- **Security**: Standard HTTPS encryption
+- **No Storage**: We don't store your Katana data
 
-## Your Rights and Control
+## Your Privacy Rights
+
+### Analytics Opt-Out
+- **Complete Opt-Out**: Use "Disable All Analytics" button in extension settings
+- **Email Opt-Out**: Use "Opt Out" button to return to anonymous tracking
+- **Uninstall**: Remove extension to stop all data collection
+- **Clear Data**: Clear browser data to remove local storage
+
+### Email Opt-Out
+- **Extension Settings**: Use the opt-out button in extension settings
+- **Instant Effect**: Your choice is applied immediately
+- **Reversible**: You can opt back in anytime through the same interface
 
 ### Data Access
-- All your data is stored locally on your device
-- You have complete control and access to all stored information
-- No external data requests or exports needed
+- **Local Control**: All your data is stored locally on your device
+- **Anonymous Data**: Analytics data is not personally identifiable
+- **Email Records**: Available through extension settings interface
 
-### Data Deletion
-- Uninstall the extension to remove all stored data
-- Clear browser data to remove extension storage
-- No external accounts or profiles to delete
+## Limited Use Disclosure
 
-### Data Portability
-- No data lock-in since everything is stored locally
-- Your Katana data remains in your Katana account
-- Extension preferences can be reset at any time
+This extension's use of information received from Katana APIs and web pages adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements:
 
-## Permissions Explained
+- **Single Purpose**: Data is used solely to provide Katana productivity tools
+- **No Advertising**: We never use data for personalized advertising
+- **No Unauthorized Transfer**: Data is not shared with third parties
+- **Human Review**: No humans read your personal data without consent
 
-### Required Chrome Permissions
-- **Storage:** Store API keys and preferences locally
-- **Active Tab:** Access current Katana page for tool functionality
-- **Host Permissions:** Communicate with factory.katanamrp.com only
+## Compliance and Permissions
 
-### Why We Need These Permissions
-- **Local Storage:** Save your settings and API key securely
-- **Katana Access:** Display tools and interact with Katana pages
-- **API Communication:** Make requests to Katana API on your behalf
+### Chrome Permissions Required
+- **Storage**: Save API keys and preferences securely
+- **Active Tab**: Access current Katana page for functionality
+- **Host Permissions**: Communicate with Katana servers only
+
+### Data Protection Standards
+- **GDPR Compliant**: Minimal data collection with clear consent
+- **CCPA Compliant**: No sale of personal information
+- **Privacy by Design**: Built with user privacy as priority
 
 ## Changes to Privacy Policy
 
@@ -117,43 +148,29 @@ Katana Master Extension is committed to protecting your privacy. This extension 
 ## Contact and Support
 
 ### Privacy Questions
-- Contact: taylor.hagel@katanamrp.com
-- Subject: "Privacy Policy - Katana Extension"
-- Response time: Within 2 business days
+- **Email**: taylor.hagel@katanamrp.com
+- **Subject**: "Privacy Policy - Katana Extension"
+- **Response**: Within 2 business days
 
-### Data Concerns
-- All data is local - we cannot access your information
-- For account-related issues, contact Katana support directly
-- Extension issues handled through GitHub repository
-
-## Compliance and Legal
-
-### Data Protection Standards
-- Designed with privacy-by-design principles
-- Minimal data collection approach
-- User control and transparency prioritized
-
-### Regional Compliance
-- GDPR compliant (no personal data collection)
-- CCPA compliant (no data sharing or selling)
-- Designed to meet global privacy standards
+### Opt-Out Requests
+- **Complete Analytics Opt-Out**: Use "Disable All Analytics" button in extension settings
+- **Email Opt-Out**: Use "Opt Out" button in extension settings  
+- **Immediate Effect**: All changes apply instantly without contacting us
+- **Contact Support**: Email us for questions about privacy settings
 
 ---
 
-## Summary: Your Privacy is Protected
+## Summary
 
-✅ **No data collection** - We don't collect any personal information  
-✅ **Local storage only** - Everything stays on your device  
-✅ **Encrypted security** - API keys are encrypted before storage  
-✅ **Direct API communication** - No intermediary servers involved  
-✅ **Complete control** - Uninstall removes all data  
-✅ **No tracking** - No analytics, cookies, or behavior monitoring  
-✅ **Transparent operation** - Open source architecture available for review  
+📊 **Anonymous analytics** - Improve extension functionality  
+📧 **Optional email** - Opt-in only for better support  
+🔒 **Secure transmission** - All data encrypted via HTTPS  
+🎯 **Single purpose** - Data used only for extension features  
+❌ **No advertising** - Never used for ads or marketing  
+🚫 **No data selling** - Your data is never sold or shared  
+⚙️ **Complete control** - Disable all analytics anytime in settings  
+🚪 **Easy opt-out** - No contact required, instant effect  
 
-**Your data is yours.** This extension is designed to enhance your Katana workflow without compromising your privacy or security.
-
----
-
-**Questions about privacy?** Contact taylor.hagel@katanamrp.com
+**Questions?** Contact taylor.hagel@katanamrp.com
 
 **Need support?** See our [User Guide]({{ site.baseurl }}/instructions/) or [Technical Documentation]({{ site.baseurl }}/readme/)
