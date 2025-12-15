@@ -8,7 +8,16 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.5.3 - Current Release
+## Version 1.5.4 - Current Release
+
+**Release Date:** December 15, 2025
+
+- 🚀 **What's New Link** - Clicking on the version number in the extension gets you here. 😉
+- 🔧 **Fixed Multi-Supplier Bugs** - 35 character sategory issue has been fixed 
+
+---
+
+## Version 1.5.3
 
 **Release Date:** December 15, 2025
 
