@@ -1,11 +1,11 @@
 ---
 layout: home
-title: Katana Chrome Extension - Home
+title: Katana Admin Panel - Home
 ---
 
 ## Chrome Extension Link
 
-- **Ready to install?** ⬇️ View this extension on the Chrome Store. [Katana Master Extension](https://chromewebstore.google.com/detail/katana-master-extension/eneeifeammnjoeplhliicplgmimcpkai?authuser=0&hl=en) Currently Published and Unlisted. 
+- **Ready to install?** ⬇️ View this extension on the Chrome Store. [Katana Admin Panel](https://chromewebstore.google.com/detail/katana-master-extension/eneeifeammnjoeplhliicplgmimcpkai?authuser=0&hl=en) Currently Published and Unlisted. 
 
 ## Quick Start
 

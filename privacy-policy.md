@@ -8,7 +8,7 @@ permalink: /privacy/
 
 ## Overview
 
-Katana Master Extension is committed to protecting your privacy. This extension collects minimal usage analytics to improve functionality and provides optional email-based support. This privacy policy explains what data we collect, how we use it, and your rights regarding your data.
+Katana Admin Panel is committed to protecting your privacy. This extension collects minimal usage analytics to improve functionality and provides optional email-based support. This privacy policy explains what data we collect, how we use it, and your rights regarding your data.
 
 ## Data Collection
 

@@ -4,6 +4,8 @@ title: What's New
 permalink: /whats-new/
 ---
 
+# What's New in Katana Admin Panel
+
 Discover the latest tools and features added to enhance your Katana MRP workflow.
 
 ---

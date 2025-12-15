@@ -6,7 +6,7 @@ permalink: /instructions/
 
 # Instructions
 
-**Welcome!** This guide will help you use the Katana Master Extension to streamline your workflow. No technical experience required - just follow the steps below.
+**Welcome!** This guide will help you use the Katana Admin Panel to streamline your workflow. No technical experience required - just follow the steps below.
 
 > **💡 First time with Katana?** This extension works alongside your Katana MRP account at https://factory.katanamrp.com to make common tasks faster and easier.
 
@@ -48,7 +48,7 @@ permalink: /instructions/
 ### Installing the Extension
 
 1. **Install from Chrome Web Store** (when available)
-   - Search for "Katana Master Extension"
+   - Search for "Katana Admin Panel"
    - Click "Add to Chrome"
    - Pin the extension to your toolbar
 
