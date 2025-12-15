@@ -31,7 +31,7 @@ minima:
 header_pages:
   - user-guide.md
   - technical-docs.md
-  - version-history.md
+  - whats-new.md
   - privacy-policy.md
   - license-info.md
 

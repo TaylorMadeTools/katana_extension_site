@@ -19,7 +19,6 @@ Enhance your Katana MRP workflow with powerful automation tools that streamline 
 - **[What's New]({{ site.baseurl }}/whats-new/)** - Latest features and improvements in each release
 - **[User Guide]({{ site.baseurl }}/instructions/)** - Simple, step-by-step guides for each tool
 - **[Technical Documentation]({{ site.baseurl }}/readme/)** - Complete technical details and API architecture  
-- **[Changelog]({{ site.baseurl }}/changelog/)** - Detailed version history and updates
 - **[Privacy Policy]({{ site.baseurl }}/privacy/)** - How your data is handled
 - **[License]({{ site.baseurl }}/license/)** - Usage terms and conditions
 
