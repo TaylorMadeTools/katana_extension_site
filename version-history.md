@@ -10,6 +10,9 @@ All notable changes to the Katana Master Extension will be documented in this fi
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+**📌 Current Version:** 1.5.3 (December 15, 2025)  
+**💡 Quick Summary:** See [What's New]({{ site.baseurl }}/whats-new/) for feature highlights for each release.
+
 ## [Unreleased]
 
 ### Planned
@@ -17,6 +20,207 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - New tools based on user feedback and Katana page requirements
 - Advanced export/import capabilities
 - Integration with additional Katana API endpoints
+
+## [1.5.3] - 2025-12-15
+
+### Added
+
+- **🚀 NEW: Multiple Supplier Support** - Enhanced tools and workflows to handle multiple suppliers
+  - Improved supplier management across import and export operations
+  - Better integration with multi-supplier scenarios
+  - Enhanced flexibility for complex supplier workflows
+
+### Changed
+
+- **🎨 Branding Updates** - Refreshed visual design and interface consistency
+  - Updated color schemes and visual elements
+  - Improved UI consistency throughout the extension
+  - Enhanced overall aesthetic and user experience
+- **Interface Refinement** - Improved user experience across all tools
+  - Better visual hierarchy and layout consistency
+  - Streamlined interface for improved usability
+
+### Fixed
+
+- **Supplier Workflow Improvements** - Better handling of multiple supplier scenarios
+  - Improved data accuracy in multi-supplier contexts
+  - Enhanced validation and error handling
+
+## [1.5.2] - 2025-11-12
+
+### Added
+
+- **🚀 NEW: Analytics Opt-In Management Tool** - Complete user control over analytics preferences
+  - Email opt-in for direct support and feature feedback with instant setup
+  - "Disable All Analytics" option with confirmation dialog for complete privacy control
+  - Re-enable analytics option for users who change their mind
+  - Real-time status display showing current analytics and email preferences
+- **Enhanced Privacy Controls** - Self-service analytics management without contacting support
+  - One-click opt-out from all analytics tracking with user confirmation
+  - Seamless integration between analytics preferences and MixpanelAPI tracking
+  - Persistent local storage of all privacy preferences with instant application
+
+### Changed
+
+- **Unified Client ID Management** - Eliminated duplicate ID generation between analytics and tracking systems
+  - Single source of truth for client ID generation through MixpanelAPI class
+  - Consistent "client\_" prefix across all anonymous tracking maintaining reporting continuity
+  - Analytics opt-in tool now reads actual MixpanelAPI client ID instead of generating separate IDs
+- **Enhanced User Experience** - Streamlined analytics preferences interface
+  - Clear visual feedback for all three analytics states (anonymous, opted-in, disabled)
+  - Instant UI updates when preferences change without requiring page refresh
+  - Comprehensive status display showing current user ID and preference state
+
+### Fixed
+
+- **Client ID Consistency Issues** - Resolved redundant ID generation causing analytics fragmentation
+  - Removed duplicate generateRandomUserId() function from analyticsOptIn.js
+  - Fixed inconsistent client ID usage between tracking and display systems
+  - Ensured single client ID used across extension for accurate analytics tracking
+
+### Security
+
+- **Enhanced Privacy Compliance** - Complete user control over all data collection
+  - Anonymous analytics can be completely disabled with single click
+  - No tracking occurs when analytics is disabled - MixpanelAPI returns early from all events
+  - Clear confirmation dialog explaining benefits of anonymous data before opt-out
+  - All privacy preferences stored locally with no external transmission
+
+## [1.5.1] - 2025-11-10
+
+### Fixed
+
+- **🔧 Development File Loading** - Eliminated console errors for missing development files
+  - Silent fallback for missing key.json and key.txt files in production environments
+  - Generate random user ID for analytics when no development keys are present
+  - Improved production stability by removing unnecessary error logging for dev-only files
+- **📊 Analytics Restoration** - Restored "Admin Panel Opened" session tracking
+  - Re-implemented session_start analytics event that was accidentally removed
+  - Ensures consistent analytics collection for panel usage metrics
+- **📈 Enhanced Import Analytics** - Added detailed metrics for import operations
+  - Line item count tracking for sales order and purchase order imports
+  - Total quantity metrics for imported orders providing volume insights
+  - Enhanced analytics granularity for better usage pattern understanding
+
+## [1.5.0] - 2025-11-07
+
+### Added
+
+- **🚀 NEW: Anonymous Usage Analytics** - Privacy-focused analytics system for extension improvement
+  - Anonymous usage tracking for tool usage patterns and success/failure rates
+  - No personal data, Order IDs, Customer IDs, or any Katana identifiers collected
+  - Aggregate statistics only: operation counts, error rates, tool popularity
+  - Optional analytics help improve tool reliability and guide development priorities
+- **Enhanced Sales Tools Granular Control** - Individual component visibility management
+  - Historical Sales Order Import component can be individually controlled (hidden by default)
+  - Sales Order Template & Import buttons can be controlled separately
+  - Sales Order Search Box can be controlled independently
+  - Improved user customization of sales interface reducing clutter
+- **Enhanced Import Success Messages** - Comprehensive operation reporting
+  - Customer import results now show separate counts for customers and addresses created/updated
+  - Supplier import results now show separate counts for suppliers and addresses created/updated
+  - Better visibility into all operations performed during import processes
+- **Improved Address Creation Logic** - Enhanced supplier/customer address handling
+  - Fixed address creation when Address ID is blank but address data is provided
+  - Automatic address creation for existing suppliers/customers when new address data is added
+  - Better detection of address data presence for create vs update decisions
+
+### Changed
+
+- **Mixpanel Integration Architecture** - Implemented privacy-first analytics framework
+  - ES6 module compatibility with global window assignment for broad tool support
+  - Centralized analytics API with consistent event structure across all tools
+  - Automatic development vs production environment detection and filtering
+- **Tool Visibility System Enhancement** - Extended granular control to sales tools
+  - Sales tools broken down into 3 individually controllable components
+  - Historical Import hidden by default to reduce interface complexity
+  - Conditional event listener attachment only for visible components
+- **Import Result Display Improvements** - Enhanced feedback and transparency
+  - Detailed breakdown showing customers/suppliers created vs updated separately
+  - Address operations clearly reported alongside main entity operations
+  - Global info box messages include address operation counts when applicable
+
+### Fixed
+
+- **🚨 CRITICAL: Supplier Address Creation Bug** - Fixed addresses not being created when Address ID was blank
+  - Added logic to detect address data presence when no Address ID exists
+  - Proper address creation triggering for suppliers with new address information
+  - Consistent address handling between update and create scenarios
+- **Mixpanel Export Compatibility Issues** - Resolved ES6 module import conflicts
+  - Fixed "does not provide an export named 'default'" errors in customer/supplier tools
+  - Changed from ES6 imports to global window object access for compatibility
+  - Resolved syntax errors when mixpanel-api.js loaded as regular script vs module
+- **Keyboard Shortcuts Analytics** - Added tracking for shortcut configuration changes
+  - "Add new row shortcut used" event with success indicator and selected key
+  - Enhanced debugging and usage pattern understanding
+
+### Security
+
+- **Privacy-First Analytics Implementation** - Zero personal data collection
+  - Explicit exclusion of all Katana IDs (Order IDs, Customer IDs, Purchase Order IDs, etc.)
+  - Only aggregate counts, percentages, success/failure indicators collected
+  - No personally identifiable information transmitted to analytics service
+  - Full compliance with privacy policy and user data protection standards
+
+## [1.4.2] - 2025-10-29
+
+### Fixed
+
+- **🚨 CRITICAL: Sales Order Customer Duplication Bug** - Fixed critical issue where sales order imports were creating duplicate customers instead of finding existing ones
+- **Customer Data Structure Handling** - Corrected improper handling of fetchAllCustomers API response structure in both salesTools.js and historicalSalesOrders.js
+- **Customer Lookup Logic** - Enhanced customer search functionality with proper data extraction from API response wrapper
+- **Import Data Integrity** - Sales order imports now correctly identify existing customers by email, preventing unnecessary customer creation
+
+### Changed
+
+- **Enhanced Debug Logging** - Added comprehensive debugging for customer search process showing loaded customer count and search results
+- **Improved API Response Handling** - Better handling of both direct array and wrapped response formats from fetchAllCustomers function
+- **Customer Search Robustness** - More reliable customer lookup with fallback mechanisms and detailed progress reporting
+
+## [1.4.1] - 2025-10-28
+
+### Fixed
+
+- Fixed Historic Order Import (HSI) detached panel functionality that was broken in previous version
+- Restored missing historicalSalesOrders.js file from version control
+- Resolved issue where HSI detached panel only displayed "Logs" instead of full import interface
+
+## [1.4.0] - 2025-10-28
+
+### Added
+
+- **🚀 NEW: Stock Transfer Management Tools** - Complete stock transfer template generation and import system
+  - Excel template generation with locations dropdown validation and inventory lookup formulas
+  - Real-time inventory visibility showing current stock levels at origin and destination locations
+  - Advanced validation with conflict detection for transfer-level fields (locations, dates)
+  - Auto-population feature for efficient multi-line transfer entry
+  - Comprehensive validation rules with visual indicators (green for sufficient stock, red for conflicts)
+  - Support for both /stocktransfers and /stocktransfers/done pages
+- **🚀 NEW: Customer Reference Search** - Quick sales order lookup by customer reference number
+  - Instant search functionality on sales pages for finding orders by customer reference
+  - Real-time results display with clickable order links in History box
+  - Integration with existing sales tools for seamless workflow
+  - Search results persist in Memory box with clear success/error messaging
+- **Enhanced Sidepanel Width Management** - Improved responsive design and width control
+  - Enhanced CSS layout ensuring header and footer expand properly with sidepanel width
+  - Improved responsive behavior maintaining usability across different panel sizes
+
+### Changed
+
+- **Display Tools Architecture** - Added stock transfer tools to tool visibility management system
+- **Sales Tools Integration** - Enhanced sales tools with customer reference search functionality
+- **Tool Registry Expansion** - Updated tool registry to include stock transfer tools for /stocktransfers URLs
+- **CSS Layout Improvements** - Enhanced flexbox layout for better responsive behavior across all components
+
+### Fixed
+
+- **Header/Footer Width Issues** - Fixed header and footer not expanding to full width when sidepanel is resized
+- **Layout Responsiveness** - Improved overall layout behavior ensuring all elements scale properly together
+- **Tool Loading Logic** - Enhanced tool ID mapping to properly handle stock transfer page URLs
+
+### Security
+
+- **Consistent API Integration** - Stock transfer tools follow established security patterns for API key handling and data validation
 
 ## [1.3.0] - 2025-10-26
 

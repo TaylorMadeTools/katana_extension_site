@@ -28,6 +28,7 @@ permalink: /instructions/
 ## Table of Contents
 
 - [Getting Started](#getting-started)
+- [Multiple Supplier Management](#multiple-supplier-management)
 - [Basic Tools](#basic-tools)
 - [Purchase Order Management](#purchase-order-management)
 - [Customer Management](#customer-management)
@@ -82,6 +83,12 @@ The side panel appears on the right side of your Katana pages and shows differen
 - **Settings page** → Tool Display Settings
 
 The **History box** at the top keeps a log of everything you do - think of it as your activity history.
+
+---
+
+## Multiple Supplier Management
+
+<div style="position: relative; padding-bottom: 41.86046511627907%; height: 0;"><iframe src="https://www.loom.com/embed/740f6e340e8f4a9eac68d668b8588924" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ---
 

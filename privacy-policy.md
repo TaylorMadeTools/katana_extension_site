@@ -4,7 +4,7 @@ title: Privacy Policy
 permalink: /privacy/
 ---
 
-**Last Updated:** November 12, 2024
+**Last Updated:** December 15, 2025
 
 ## Overview
 
@@ -141,8 +141,9 @@ This extension's use of information received from Katana APIs and web pages adhe
 - Continued use constitutes acceptance of updated terms
 
 ### Version History
-- Previous versions available in extension documentation
-- Change logs document any privacy-related updates
+- Current version: 1.5.3 (December 15, 2025)
+- [Full version history and What's New]({{ site.baseurl }}/whats-new/) available with feature highlights
+- [Detailed change logs]({{ site.baseurl }}/changelog/) document all updates including privacy-related changes
 - Transparency in all policy modifications
 
 ## Contact and Support

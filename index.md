@@ -16,17 +16,22 @@ Enhance your Katana MRP workflow with powerful automation tools that streamline 
 
 ## 📚 Documentation
 
+- **[What's New]({{ site.baseurl }}/whats-new/)** - Latest features and improvements in each release
 - **[User Guide]({{ site.baseurl }}/instructions/)** - Simple, step-by-step guides for each tool
 - **[Technical Documentation]({{ site.baseurl }}/readme/)** - Complete technical details and API architecture  
-- **[Changelog]({{ site.baseurl }}/changelog/)** - Version history and updates
+- **[Changelog]({{ site.baseurl }}/changelog/)** - Detailed version history and updates
 - **[Privacy Policy]({{ site.baseurl }}/privacy/)** - How your data is handled
 - **[License]({{ site.baseurl }}/license/)** - Usage terms and conditions
 
 ## 🛠️ Available Tools
 
-- **Historical Order Import** - Find value in Katana's Planning and Forecasting add-on sooner
+- **Customer Reference Search** - Quickly find sales orders by customer reference number on sales pages
+- **Multiple Supplier Management** - Enhanced tools to handle multiple suppliers per item with PO creation
+- **Stock Transfer Management** - Generate templates and import stock transfers with real-time inventory visibility
+- **Historical Order Import** - Bulk import past orders with automatic inventory balancing
 - **Sales Order Management** - Generate templates and import open sales orders with customer auto-creation
-- **Purchase Order Discounts** - Apply bulk percentage discounts to purchase orders and import open purchase orders
+- **Purchase Order Discounts** - Apply bulk percentage discounts to purchase orders in one click
+- **Line Item Cost Management** - Track and manage costs at the line item level for better cost control
 - **Customer Management** - Import, export, and bulk create/edit customer data
 - **Supplier Management** - Import, export, and bulk create/edit supplier data  
 - **Service Items** - Track open orders and manage service items
