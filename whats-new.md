@@ -13,7 +13,7 @@ permalink: /whats-new/
 **Release Date:** December 15, 2025
 
 - 🚀 **What's New Link** - Clicking on the version number in the extension gets you here. 😉
-- 🔧 **Fixed Multi-Supplier Bugs** - 35 character sategory issue has been fixed 
+- 🔧 **Fixed Multi-Supplier Bugs** - 35 character category issue has been fixed 
 
 ---
 
