@@ -16,7 +16,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 ### Planned
-- Additional keyboard shortcuts beyond Insert key  
 - New tools based on user feedback and Katana page requirements
 - Advanced export/import capabilities
 - Integration with additional Katana API endpoints

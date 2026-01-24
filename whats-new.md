@@ -8,7 +8,19 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.5.4 - Current Release
+## Version 1.5.5 - Current Release
+
+**Release Date:** January 23, 2026
+
+- 🚀 **Customer Order History** - View sales order history directly on customer pages with auto-load option
+- 🔧 **Historical Order Import Queue** - Improved import logic and performance with queue-based processing
+- 🔧 **Mixpanel Bug Fix** - Resolved analytics error in custom field import
+- 🔧 **Open Sales Order Import** - Fixed Row 2 deletion issue
+- 🔧 **Multiple Supplier Emails** - Increased email recipient limit from 3 to 5
+
+---
+
+## Version 1.5.4
 
 **Release Date:** December 15, 2025
 
