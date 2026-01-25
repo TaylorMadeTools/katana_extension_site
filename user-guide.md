@@ -215,6 +215,37 @@ The **History box** at the top keeps a log of everything you do - think of it as
 
 ## Customer Management
 
+### Customer History
+
+**What this does:** View the complete sales order history for any customer in an organized, searchable table with advanced filtering capabilities.
+
+#### Setting Up Auto-load
+
+1. **Go to a Customer Card** in Katana
+2. **Find "Customer History" in the side panel**
+3. **Toggle "Auto-load Customer History"** if you want history to load automatically when viewing customer pages
+4. Changes are saved automatically to your preferences
+
+#### Manual Load
+
+1. **Go to any customer detail page**
+2. **Click "Load Customer History"** in the side panel
+3. **The history table will load** and display all sales orders for that customer
+
+#### Using the History Table
+
+**Once loaded, you'll see:**
+
+- **All Sales Orders:** Complete table showing every sales order for the customer
+- **Filter Columns:** Click on any column header to sort or filter data
+- **Search Bar:** Use the search box at the top of the table to search ALL columns - partial text matches are supported
+- **Refresh Button:** Click to update the table with the latest sales order data without reloading the page
+
+**Example searches:**
+- Search for order numbers, statuses, dates, or any other order data
+- Filter by columns to see specific order information
+- Combine filters and search for detailed analysis
+
 ### Downloading Customer Data
 
 **When to use:** Get all your customer information in Excel format.
@@ -557,6 +588,24 @@ The **History box** at the top keeps a log of everything you do - think of it as
    - Create customers (if needed)
    - Create sales orders
    - Create fulfillments
+
+### Resume Interrupted Imports
+
+**When to use:** Your import was interrupted and you want to continue without re-processing already imported orders.
+
+1. **When an import is interrupted** (due to network issue, page reload, etc.), the tool saves your progress
+2. **Click "Load Previous Import"** to reload the file from your last session
+3. **You'll see a summary** showing:
+   - Total orders in file
+   - Already processed orders
+   - Remaining orders to import
+4. **Click "Resume Import"** to continue processing from where it left off
+5. **Only remaining orders** will be processed - previously imported orders are skipped automatically
+
+**⚠️ Important Notes:**
+- Resume data is stored locally in your browser for the current session
+- Resuming is only available for the most recent import attempt
+- Once you complete an import or start a new import, the previous resume data is cleared
 
 ### Using Template Format
 

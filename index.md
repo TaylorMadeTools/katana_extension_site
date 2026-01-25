@@ -25,9 +25,10 @@ Enhance your Katana MRP workflow with powerful automation tools that streamline 
 ## 🛠️ Available Tools
 
 - **Customer Reference Search** - Quickly find sales orders by customer reference number on sales pages
+- **Customer History** - View complete sales order history for any customer with advanced filtering and search
 - **Multiple Supplier Management** - Enhanced tools to handle multiple suppliers per item with PO creation
 - **Stock Transfer Management** - Generate templates and import stock transfers with real-time inventory visibility
-- **Historical Order Import** - Bulk import past orders with automatic inventory balancing
+- **Historical Order Import** - Bulk import past orders with automatic inventory balancing and resume capability
 - **Sales Order Management** - Generate templates and import open sales orders with customer auto-creation
 - **Purchase Order Discounts** - Apply bulk percentage discounts to purchase orders in one click
 - **Line Item Cost Management** - Track and manage costs at the line item level for better cost control
