@@ -8,7 +8,18 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.5.5 - Current Release
+## Version 1.5.6 - Current Release
+
+**Release Date:** March 3, 2026
+
+- 🚀 **Sales Order Multi-Field Search** - Search open sales orders by order number, customer name, address, product name, and additional info with smart rate-limit monitoring
+- 🔧 **Rate Limiting & API Stability** - Fixed 429 rate-limit errors during bulk imports by consolidating API calls through centralized rate-limiting layer with automatic retries
+- 🔧 **Detailed Import Progress** - Custom fields import now shows per-row progress (e.g., "Processing row 15 of 30") instead of static status messages
+- 🔧 **Bulk Operations Reliability** - Improved stability for all bulk import tools (sales orders, purchase orders, custom fields) with automatic rate-limit recovery
+
+---
+
+## Version 1.5.5
 
 **Release Date:** January 25, 2026
 
