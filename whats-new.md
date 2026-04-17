@@ -8,7 +8,29 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.5.6 - Current Release
+## Version 1.5.8 - Current Release
+
+**Release Date:** April 17, 2026
+
+- 🚀 **Excel File Support for Historical Imports** - Import historical sales orders from `.xlsx` and `.xls` files in addition to `.csv` — supports both native Shopify exports and template files saved as Excel
+- 🔧 **Improved Date Parsing** - Robust date handling across ISO (`2025-12-03`), US (`12/03/2025`), and EU (`03/12/2025`) formats, including Excel Date objects — no more "Invalid time value" errors
+- 🔧 **File Format Validation** - Unrecognized files are now rejected with a clear error instead of silently producing bad data
+- 🔧 **CSV Quoted Field Handling** - RFC 4180-compliant CSV parser correctly handles commas inside quoted fields (e.g., addresses like `"123 Main St, Suite 4"`)
+- 🔧 **Accurate Import Results** - Results display now shows a single consistent Succeeded/Skipped/Failed breakdown instead of contradicting counts
+- � **Analytics Bug Fixes** - Minor improvements to anonymous analytics tracking and session persistence
+
+---
+
+## Version 1.5.7
+
+**Release Date:** March 15, 2026
+
+- 🔧 **Custom Field Import Fix** - Improved change detection to accept `0` as a valid field value instead of skipping it
+- 🔧 **Custom Field Patch Logic** - Fields with changed values are now correctly patched even when no Collection Name is provided
+
+---
+
+## Version 1.5.6
 
 **Release Date:** March 3, 2026
 
@@ -177,6 +199,11 @@ permalink: /whats-new/
 
 | Version | Release Date | What's New |
 |---------|-------------|-----------|
+| 1.5.8 | Apr 17, 2026 | Excel Import, Date Parsing & Results Display |
+| 1.5.7 | Mar 15, 2026 | Custom Field Import Fix |
+| 1.5.6 | Mar 3, 2026 | Sales Order Search & Rate Limiting |
+| 1.5.5 | Jan 25, 2026 | Customer History & Import Queue |
+| 1.5.4 | Dec 15, 2025 | What's New Link & Multi-Supplier Fix |
 | 1.5.3 | Dec 15, 2025 | Multiple Supplier Support & Branding |
 | 1.5.2 | Nov 12, 2025 | Analytics Management Tool |
 | 1.5.1 | Nov 10, 2025 | Enhanced Import Reporting |
