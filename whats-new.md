@@ -8,7 +8,17 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.5.8 - Current Release
+## Version 1.5.9 - Current Release
+
+**Release Date:** April 17, 2026
+
+- 🔧 **SKU Variant Lookup Batching** - Large SKU lookups are now batched (250 per request) with pagination, preventing failures when importing purchase orders with many unique SKUs
+- 🔧 **Purchase Order Template Capacity** - Template now supports up to 4,999 line items (previously 99) with date formatting applied across all rows
+- 🔧 **Visible Supplier & Location ID Columns** - Supplier ID and Location ID columns in the PO import template are no longer hidden, making it easier to review and troubleshoot imports
+
+---
+
+## Version 1.5.8
 
 **Release Date:** April 17, 2026
 
