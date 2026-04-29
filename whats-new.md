@@ -12,7 +12,7 @@ permalink: /whats-new/
 
 **Release Date:** April 29, 2026
 
-- 🚀 **Customer History Export** - Export the sales order history grid to Excel directly from the customer page. The download respects any active filters and sort order, and the file is automatically named after the customer (e.g. `Taylor_Hagel_order_history.xlsx`)
+- 🚀 **Customer History Export** - Export the sales order history grid to Excel directly from the customer page. The download respects any active filters and sort order, and the file is automatically named after the customer (e.g. `customer_name_order_history.xlsx`)
 - 🔧 **Extension Stability Fix** - Resolved an "Extension context invalidated" error that occurred when the extension was reloaded while a customer page was open, which could cause the auto-load to throw uncaught errors
 
 ---
