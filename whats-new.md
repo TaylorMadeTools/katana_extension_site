@@ -8,7 +8,16 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.5.9 - Current Release
+## Version 1.6.0 - Current Release
+
+**Release Date:** April 29, 2026
+
+- 🚀 **Customer History Export** - Export the sales order history grid to Excel directly from the customer page. The download respects any active filters and sort order, and the file is automatically named after the customer (e.g. `Taylor_Hagel_order_history.xlsx`)
+- 🔧 **Extension Stability Fix** - Resolved an "Extension context invalidated" error that occurred when the extension was reloaded while a customer page was open, which could cause the auto-load to throw uncaught errors
+
+---
+
+## Version 1.5.9
 
 **Release Date:** April 17, 2026
 
@@ -209,6 +218,8 @@ permalink: /whats-new/
 
 | Version | Release Date | What's New |
 |---------|-------------|-----------|
+| 1.6.0 | Apr 29, 2026 | Customer History Export |
+| 1.5.9 | Apr 17, 2026 | SKU Variant Batching & PO Template Capacity |
 | 1.5.8 | Apr 17, 2026 | Excel Import, Date Parsing & Results Display |
 | 1.5.7 | Mar 15, 2026 | Custom Field Import Fix |
 | 1.5.6 | Mar 3, 2026 | Sales Order Search & Rate Limiting |
