@@ -8,7 +8,26 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.6.0 - Current Release
+## Version 1.6.1 - Current Release
+
+**Release Date:** May 8, 2026
+
+- 🚀 **Open Order Import Overhaul** - The import template and logic have been significantly updated to align with the latest Katana API
+  - **Customer Name** replaces Customer Email as the primary customer column — email is now a separate optional column used for lookup only
+  - **Customer lookup** tries email match first, then name match, then creates a new customer if neither matches
+  - **Order Number is now optional** — leave it blank and Katana auto-assigns the next sequential number
+  - **Line # column** for grouping multi-line orders when Order Number is blank: `1` (or blank) starts a new order, `2`, `3`, `4`... add line items to the same order
+  - Orders with a filled Order Number continue to group by matching order number as before — Line # is ignored
+- 🔧 **Import template cleanup** - Replaced the "READ FIRST" and "Validation Rules" helper sheets with inline column header notes (hover any header cell to see its rules and format guidance)
+- 🔧 **Cross-order inheritance fix** - Field inheritance (addresses, customer, dates) is now correctly scoped within an order group — values no longer bleed from one order into the next
+- 🔧 **Historical Import: SKU-targeted variant loading** - Instead of fetching all variants in your account, the importer now only loads the specific SKUs present in the uploaded file — significantly faster for accounts with large catalogues
+- 🔧 **Historical Import: Blank row filtering** - Trailing empty rows (common in Excel-exported CSVs) are now stripped before processing, preventing phantom orders being generated for blank lines
+- 🔧 **Historical Import: Customer ID re-resolution** - Customer IDs are now re-resolved at queue time after customer creation, fixing cases where orders could fail if the customer was created mid-import
+- 🔧 **Historical Import: Error display fix** - Error messages that were objects instead of strings are now correctly displayed in the results panel
+
+---
+
+## Version 1.6.0
 
 **Release Date:** April 29, 2026
 
@@ -218,6 +237,7 @@ permalink: /whats-new/
 
 | Version | Release Date | What's New |
 |---------|-------------|-----------|
+| 1.6.1 | May 8, 2026 | Open Order Import Overhaul |
 | 1.6.0 | Apr 29, 2026 | Customer History Export |
 | 1.5.9 | Apr 17, 2026 | SKU Variant Batching & PO Template Capacity |
 | 1.5.8 | Apr 17, 2026 | Excel Import, Date Parsing & Results Display |
