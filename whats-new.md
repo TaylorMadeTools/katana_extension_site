@@ -8,7 +8,20 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.6.1 - Current Release
+## Version 1.6.2 - Current Release
+
+**Release Date:** May 22, 2026
+
+- 🔧 **Location List Pagination Fix** - Customers with more than 50 locations were seeing some locations missing from import templates. The location API call now paginates through all results (no cap), so every location appears in:
+  - Stock Transfer Import template
+  - Purchase Order Import template
+  - Sales Order Import template
+  - Historical Sales Order Import
+- 🔧 **Progress indicators** for location loading now update correctly during template generation in the affected tools
+
+---
+
+## Version 1.6.1
 
 **Release Date:** May 8, 2026
 
