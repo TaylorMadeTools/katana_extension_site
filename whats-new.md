@@ -8,7 +8,20 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.6.2 - Current Release
+## Version 1.6.3 - Current Release
+
+**Release Date:** May 26, 2026
+
+- 🚀 **Stock Transfer Template (No Stock Levels)** - New lightweight download option for customers with very large catalogs where the standard template was timing out fetching inventory (e.g. accounts with 250,000+ inventory records)
+  - Generates almost instantly — only fetches locations, skips the full inventory load
+  - Drops the on-template stock-level columns (In Stock at Origin, In Stock at Destination, Committed at Destination) so users enter SKU + QTY directly
+  - SKUs are resolved to variant IDs at **import time** via a batched lookup (250 SKUs per request), so the existing import flow still works end-to-end
+  - The original "Download Template" button is unchanged for customers who rely on inline stock-level visibility
+- 🔧 **Clearer SKU error messages** - Import now reports `SKU "XYZ" not found in Katana variants` instead of a generic "missing required fields" message when a SKU can't be matched
+
+---
+
+## Version 1.6.2
 
 **Release Date:** May 22, 2026
 
@@ -250,6 +263,8 @@ permalink: /whats-new/
 
 | Version | Release Date | What's New |
 |---------|-------------|-----------|
+| 1.6.3 | May 26, 2026 | Stock Transfer Template (No Stock Levels) |
+| 1.6.2 | May 22, 2026 | Location List Pagination Fix |
 | 1.6.1 | May 8, 2026 | Open Order Import Overhaul |
 | 1.6.0 | Apr 29, 2026 | Customer History Export |
 | 1.5.9 | Apr 17, 2026 | SKU Variant Batching & PO Template Capacity |
