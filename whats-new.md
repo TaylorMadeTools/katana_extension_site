@@ -8,7 +8,18 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.6.3 - Current Release
+## Version 1.6.4 - Current Release
+
+**Release Date:** June 15, 2026
+
+- 🔧 **Supplier Address Update Fix** - Address updates in the Supplier Data import were silently failing on some accounts
+  - The "📥 Download Results File" button is now shown after every supplier import. The results file was already being generated but had no button to download it, so users couldn't see the per-row API error messages explaining *why* an address update failed
+  - Address ZIP codes are now stringified before being sent to the Katana API in both the address-update (PATCH) and address-create paths, matching how the supplier-create path already handled them — this prevents numeric ZIP rejections (e.g. US zip `12345` getting parsed as a number by Excel)
+  - The error message in the results panel now says "Download the results file below" instead of "Please check the downloaded results file" (which previously implied a file had been auto-downloaded when it hadn't)
+
+---
+
+## Version 1.6.3
 
 **Release Date:** May 26, 2026
 
