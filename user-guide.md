@@ -593,10 +593,10 @@ The **History box** at the top keeps a log of everything you do - think of it as
 
 **When to use:** Your import was interrupted (network issue, page reload, browser closed) and you want to continue without re-processing orders that were already imported.
 
-1. **The tool saves your progress** in your browser as the import runs
+1. **The tool saves your progress** in your browser as the import runs. If your connection drops or you close the window, the import pauses where it was
 2. **Reopen the Historical Sales Orders Import tool** - a **"Resume Import?"** prompt shows the orders created so far, time elapsed, estimated time remaining and the number of errors
 3. **Choose an option:**
-   - **Continue Import** - picks up where it left off. Orders already created are checked and fulfilled, not created again
+   - **Continue Import** - picks up where it left off. It checks Katana first, so orders that were already created or fulfilled are not created or fulfilled again
    - **Keep for Later** - closes the prompt and keeps the saved progress so you can resume next time
    - **Discard** - deletes the saved progress. Remaining orders will not be imported
 

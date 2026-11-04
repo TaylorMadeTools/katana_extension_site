@@ -17,6 +17,9 @@ permalink: /whats-new/
   - Finished and discarded imports are now cleared from storage, along with leftovers from earlier versions
   - Orders that fail are kept in the error list and skipped when you resume, instead of being retried, to avoid creating duplicate sales orders
   - For very large files, split the import into batches of 10,000 orders or fewer
+- 🔧 **Safer Resume After a Lost Connection** - Closing the import window or losing your connection mid-import no longer marks the order in progress as failed
+  - The import pauses and keeps each order at the step it reached. Reopen the tool to resume
+  - Resume now checks Katana before creating or fulfilling an order, so interrupted orders aren't created or fulfilled twice
 
 ---
 
