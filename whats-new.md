@@ -8,7 +8,28 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.6.4 - Current Release
+## Version 1.6.6 - Current Release
+
+**Release Date:** November 3, 2026
+
+- 🔧 **Historical Order Import Storage Fix** - Large historical imports could stop partway with "Resource::kQuotaBytes quota exceeded"
+  - The tool's saved resume data was filling the browser's 10 MB storage limit for extensions. It now saves only what it needs to finish each order, and removes each order as soon as it's fulfilled, so the saved data shrinks as the import runs
+  - Finished and discarded imports are now cleared from storage, along with leftovers from earlier versions
+  - Orders that fail are kept in the error list and skipped when you resume, instead of being retried, to avoid creating duplicate sales orders
+  - For very large files, split the import into batches of 10,000 orders or fewer
+
+---
+
+## Version 1.6.5
+
+**Release Date:** September 22, 2026
+
+- 🔧 **Import Encoding Fix** - Spreadsheet imports were turning smart quotes, apostrophes, dashes, ellipses, € and ™ into broken characters
+  - Affected every import tool that reads a spreadsheet. Plain text and accented letters (é, ü, ñ) were not affected, and exports were not affected
+
+---
+
+## Version 1.6.4
 
 **Release Date:** June 15, 2026
 

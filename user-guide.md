@@ -591,21 +591,27 @@ The **History box** at the top keeps a log of everything you do - think of it as
 
 ### Resume Interrupted Imports
 
-**When to use:** Your import was interrupted and you want to continue without re-processing already imported orders.
+**When to use:** Your import was interrupted (network issue, page reload, browser closed) and you want to continue without re-processing orders that were already imported.
 
-1. **When an import is interrupted** (due to network issue, page reload, etc.), the tool saves your progress
-2. **Click "Load Previous Import"** to reload the file from your last session
-3. **You'll see a summary** showing:
-   - Total orders in file
-   - Already processed orders
-   - Remaining orders to import
-4. **Click "Resume Import"** to continue processing from where it left off
-5. **Only remaining orders** will be processed - previously imported orders are skipped automatically
+1. **The tool saves your progress** in your browser as the import runs
+2. **Reopen the Historical Sales Orders Import tool** - a **"Resume Import?"** prompt shows the orders created so far, time elapsed, estimated time remaining and the number of errors
+3. **Choose an option:**
+   - **Continue Import** - picks up where it left off. Orders already created are checked and fulfilled, not created again
+   - **Keep for Later** - closes the prompt and keeps the saved progress so you can resume next time
+   - **Discard** - deletes the saved progress. Remaining orders will not be imported
 
 **⚠️ Important Notes:**
-- Resume data is stored locally in your browser for the current session
-- Resuming is only available for the most recent import attempt
-- Once you complete an import or start a new import, the previous resume data is cleared
+- Saved progress stays in your browser until the import finishes or you discard it
+- Fulfilled orders are removed from the saved progress as the import runs, and a finished import is cleared automatically
+- Orders that failed are listed in the errors and are not retried on resume. Fix them and import them separately so no duplicate sales orders are created
+- Before resuming after an error, check Katana for sales orders from that run that were created but not fulfilled
+
+### Large Imports
+
+The browser gives the extension about 10 MB to save import progress, so one import can hold roughly 10,000 to 24,000 orders depending on how many lines each order has.
+
+- **Split files larger than 10,000 orders into batches** and import them one after another
+- Each batch clears its saved progress when it finishes, so batches don't add up
 
 ### Using Template Format
 
