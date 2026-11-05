@@ -8,7 +8,19 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.6.6 - Current Release
+## Version 1.6.7 - Current Release
+
+**Release Date:** November 4, 2026
+
+- 🔧 **Historical Order Import Date Fix** - Imported orders were showing one day early in US timezones (an order dated 10/30 showed as 10/29)
+  - Order dates, fulfillment dates and the stock adjustment date now show on the day in your file
+  - Orders imported before this version keep their old dates
+- 🔧 **Storage Cleanup for Older Imports** - Imports that failed on earlier versions could keep filling the browser's storage and cause "Resource::kQuotaBytes quota exceeded" on a new import
+  - When you open the tool, leftovers from those imports are now cleared. The most recent unfinished import is kept so you can still resume it
+
+---
+
+## Version 1.6.6
 
 **Release Date:** November 3, 2026
 
