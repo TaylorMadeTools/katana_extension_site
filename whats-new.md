@@ -8,7 +8,20 @@ permalink: /whats-new/
 
 ---
 
-## Version 1.6.7 - Current Release
+## Version 1.6.8 - Current Release
+
+**Release Date:** November 16, 2026
+
+- 🔧 **Historical Order Import Closing Date Fix** - The date check could reject a valid inventory closing date with "Inventory closing date (2025-05-10) is after required date (2025-05-10)"
+  - The closing date is now compared by calendar day and shown in your timezone, so it matches the date in Katana
+  - The closing date only needs to be 1 day before your oldest order (was 2)
+  - If the check fails, the message now says exactly which closing date to set
+- 🔧 **Location Selection** - Accounts with one location no longer need to pick it before the Import button turns on, and your selected location now shows in the log
+- ✨ **Ready Message** - Once everything passes, the log tells you to click Import to start
+
+---
+
+## Version 1.6.7
 
 **Release Date:** November 4, 2026
 

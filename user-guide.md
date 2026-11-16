@@ -551,14 +551,17 @@ The **History box** at the top keeps a log of everything you do - think of it as
 3. **Click "Get Current Closing Period Date"** to see your current setting
 4. **⚠️ Consult your accountant** before changing inventory closing dates
 5. **Click "Open Costing Settings"** to adjust the date if needed
-   - Set it to at least 2 days before your oldest historical order
-   - Maximum: 18 months ago from today
+   - Set it to at least 1 day before your oldest historical order (for example, oldest order May 12 means a closing date of May 11 or earlier)
+   - Maximum: 18 months ago from today. If Katana won't let you set the closing date early enough, remove the older orders from your file
+   - If the date check fails, the log tells you exactly which closing date to set
 
 #### Step 2: Select Location
 
 1. **Click "Load Locations"** to see available inventory locations
-2. **Select the location** where stock adjustments should be applied
+2. **Select the location** where stock adjustments should be applied (if you only have one location, it's selected for you)
 3. **Location is required** for historical imports
+
+Once the file, location and dates all pass, the log shows **"Ready - click Import Historical Sales Orders to start the import"**. The import doesn't start until you click the button.
 
 ### Using Shopify Exports
 
